@@ -102,6 +102,6 @@ $('productGrid').addEventListener('click',e=>{const b=e.target.closest('[data-op
 function setupReveal(){if(!('IntersectionObserver'in window)||!motionOK()){document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in-view'));return}const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}
 function init(){renderAllProducts();renderCart();updateBadges();configureContact();setupEvents();setupReveal();$('yearNow').textContent=new Date().getFullYear();$('searchRow').hidden=true;document.querySelectorAll('[data-category-filter]').forEach(b=>b.addEventListener('click',()=>setCategory(b.dataset.categoryFilter)));}
 </script>
-<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
 <script>init();</script>
 </body></html>
